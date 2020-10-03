@@ -8,14 +8,26 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Label",
+"class": "DebugLabel",
+"language": "GDScript",
+"path": "res://game/DebugLabel.gd"
+}, {
+"base": "Reference",
+"class": "GroupMessenger",
+"language": "GDScript",
+"path": "res://game/GroupMessenger.gd"
+} ]
 _global_script_class_icons={
-
+"DebugLabel": "",
+"GroupMessenger": ""
 }
 
 [application]
 
 config/name="LD47"
+run/main_scene="res://game/Game.tscn"
 config/icon="res://icon.png"
 
 [debug]
