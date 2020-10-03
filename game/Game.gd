@@ -3,13 +3,19 @@ extends Node
 export var player_character: PackedScene
 export var levels: Array
 
-onready var level_container = get_node(@"LevelContainer")
+onready var level_container: Node = get_node(@"LevelContainer")
+onready var menu: Control = get_node(@"MainMenu")
 
 var current_level: int = 0
 var level: Node
 
 func _ready() -> void:
 	pass
+
+func _process(delta: float) -> void:
+	if level && Input.is_action_just_pressed("menu"):
+		remove_level()
+		menu.show()
 
 func on_start_game() -> void:
 	next_level()

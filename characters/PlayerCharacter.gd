@@ -17,7 +17,6 @@ func _process(delta: float) -> void:
 
 	var target_camera_pos = self.global_transform.origin + Vector3(3.0, 2.0, 10.0)
 	camera.translation = lerp(camera.translation, target_camera_pos, delta)
-#	DebugLabel.display(self, String(camera.translation))
 
 func _physics_process(delta: float) -> void:
 	if dead:
@@ -40,5 +39,3 @@ func _physics_process(delta: float) -> void:
 		direction += Vector3.RIGHT
 	direction = direction.normalized()
 	move_and_slide(direction * speed, Vector3.UP, false, 4, 0.5)
-#	if !is_on_floor():
-#		airborne = true
