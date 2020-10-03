@@ -1,6 +1,7 @@
 extends KinematicBody
 
 export var speed: float = 4.0
+export var lateral_acceleration: float = 20.0
 export var jump_speed: float = 5.5
 
 onready var camera: Camera = get_tree().root.find_node("Camera", true, false)
@@ -21,6 +22,10 @@ func _process(delta: float) -> void:
 func _physics_process(delta: float) -> void:
 	if dead:
 		return
+	
+	if Input.is_action_just_pressed("kill"):
+		rotate_z(TAU / 4.0)
+		
 
 	if !is_on_floor():
 		y_velocity -= 9.8 * delta
