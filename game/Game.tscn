@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://fonts/Noto/NotoMono-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://game/DebugLabel.gd" type="Script" id=2]
 [ext_resource path="res://game/menu/MainMenu.tscn" type="PackedScene" id=3]
+[ext_resource path="res://game/Game.gd" type="Script" id=4]
+[ext_resource path="res://levels/Level0.tscn" type="PackedScene" id=5]
+[ext_resource path="res://characters/PlayerCharacter.tscn" type="PackedScene" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 20
@@ -10,6 +13,9 @@ use_filter = true
 font_data = ExtResource( 1 )
 
 [node name="Game" type="Node"]
+script = ExtResource( 4 )
+player_character = ExtResource( 6 )
+levels = [ ExtResource( 5 ) ]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 99
@@ -18,6 +24,8 @@ layer = 99
 anchor_right = 0.5
 anchor_bottom = 0.5
 custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_as_outline = 2
 text = "DebugLabel"
 script = ExtResource( 2 )
 __meta__ = {
@@ -25,3 +33,10 @@ __meta__ = {
 }
 
 [node name="MainMenu" parent="." instance=ExtResource( 3 )]
+
+[node name="LevelContainer" type="Node" parent="."]
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 10 )
+keep_aspect = 0
+current = true
