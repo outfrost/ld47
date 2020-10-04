@@ -1,7 +1,7 @@
 extends KinematicBody
 
 const MAX_LIFE_TIME: int = 1
-const SPEED: int = 2
+const SPEED: int = 20
 var direction: Vector3
 var life_time: float = 0
 var collided: bool = false
@@ -11,7 +11,7 @@ func _ready():
 
 func _process(delta):
 	if not collided:
-		var collision = move_and_collide(direction * SPEED, false)
+		var collision = move_and_collide(delta * direction * SPEED, false)
 		if collision:
 			# TODO:
 			# if projectile hits the player, it stays in place were it hit the player
