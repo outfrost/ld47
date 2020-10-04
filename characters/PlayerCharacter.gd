@@ -22,7 +22,7 @@ func _process(delta: float) -> void:
 		return
 
 	var target_camera_pos = self.global_transform.origin + Vector3(3.0, 2.0, 10.0)
-	camera.translation = lerp(camera.translation, target_camera_pos, delta)
+	camera.translation = lerp(camera.translation, target_camera_pos, clamp(delta * 4.0, 0.0, 1.0))
 
 func _physics_process(delta: float) -> void:
 	if dead:
