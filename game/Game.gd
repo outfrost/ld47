@@ -20,6 +20,7 @@ func _process(delta: float) -> void:
 		back_to_menu()
 
 func on_start_game() -> void:
+	current_level = -1
 	next_level()
 
 func on_player_ded() -> void:
