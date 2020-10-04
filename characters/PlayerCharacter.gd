@@ -82,6 +82,8 @@ func _physics_process(delta: float) -> void:
 #		velocity.y = JUMP_SPEED
 
 func die() -> void:
+	if !controllable:
+		return
 	rotate_z(TAU / 4.0)
 	controllable = false
 	yield(get_tree().create_timer(2.0), "timeout")

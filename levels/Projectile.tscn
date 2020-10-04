@@ -30,7 +30,7 @@ scale = 0.05
 [sub_resource type="CylinderShape" id=6]
 height = 4.67603
 
-[node name="Spatial" type="KinematicBody"]
+[node name="Projectile" type="KinematicBody"]
 script = ExtResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
