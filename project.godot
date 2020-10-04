@@ -18,10 +18,16 @@ _global_script_classes=[ {
 "class": "GroupMessenger",
 "language": "GDScript",
 "path": "res://game/GroupMessenger.gd"
+}, {
+"base": "Popup",
+"class": "NarrativePopup",
+"language": "GDScript",
+"path": "res://game/NarrativePopup.gd"
 } ]
 _global_script_class_icons={
 "DebugLabel": "",
-"GroupMessenger": ""
+"GroupMessenger": "",
+"NarrativePopup": ""
 }
 
 [application]
