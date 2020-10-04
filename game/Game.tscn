@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://fonts/Noto/NotoMono-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://game/DebugLabel.gd" type="Script" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://characters/PlayerCharacter.tscn" type="PackedScene" id=6]
 [ext_resource path="res://levels/Level1.tscn" type="PackedScene" id=7]
 [ext_resource path="res://game/NarrativePopup.tscn" type="PackedScene" id=8]
+[ext_resource path="res://camera_env.tres" type="Environment" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 size = 20
@@ -43,4 +44,5 @@ __meta__ = {
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 10 )
 keep_aspect = 0
+environment = ExtResource( 9 )
 current = true
