@@ -1,6 +1,7 @@
 extends Spatial
 
 var emitting: bool = false
+var character: Node
 
 func _ready():
 	pass
@@ -8,8 +9,13 @@ func _ready():
 func _process(delta):
 	$Particles.emitting = emitting
 	$Light.visible = emitting
-
+	if character and emitting:
+		character.die()
 
 func _on_Area_body_entered(body):
-	if body.has_method("die") and emitting:
-		body.die()
+	if body.has_method("die"):
+		character = body
+
+func _on_Area_body_exited(body: Node) -> void:
+	if body == character:
+		character = null
