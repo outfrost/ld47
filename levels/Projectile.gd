@@ -1,7 +1,7 @@
 extends KinematicBody
 
-const MAX_LIFE_TIME: int = 1
-const SPEED: int = 20
+const MAX_LIFE_TIME: float = 1.0
+const SPEED: float = 20.0
 var direction: Vector3
 var life_time: float = 0
 var collided: bool = false

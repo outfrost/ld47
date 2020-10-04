@@ -40,7 +40,7 @@ material/0 = null
 
 [node name="Particles" type="Particles" parent="."]
 material_override = SubResource( 3 )
-amount = 5
+amount = 32
 lifetime = 2.0
 speed_scale = 15.0
 randomness = 1.0

@@ -20,6 +20,9 @@ func _process(delta: float) -> void:
 func on_start_game() -> void:
 	next_level()
 
+func on_player_ded() -> void:
+	spawn_player()
+
 func spawn_player() -> void:
 	var spawn_point: Spatial = level.find_node("SpawnPoint")
 	if !spawn_point:
@@ -27,6 +30,7 @@ func spawn_player() -> void:
 		return
 	var character: Spatial = player_character.instance()
 	character.transform = spawn_point.global_transform
+	character.connect("player_ded", self, "on_player_ded")
 	level.add_child(character)
 
 func next_level() -> void:
