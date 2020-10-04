@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://game/ui-theme/ui_theme.tres" type="Theme" id=1]
+[ext_resource path="res://game/NarrativePopup.gd" type="Script" id=2]
+
+[node name="NarrativePopup" type="Popup"]
+visible = true
+anchor_left = 0.55
+anchor_top = 0.1
+anchor_right = 0.95
+anchor_bottom = 0.25
+grow_horizontal = 0
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 16.0
+margin_top = 16.0
+margin_right = -16.0
+margin_bottom = -16.0
+bbcode_enabled = true
+bbcode_text = "Let's type a message in here"
+text = "Let's type a message in here"
