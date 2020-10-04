@@ -1,6 +1,6 @@
 extends Spatial
 
-var projectile = preload("res://levels/Projectile.tscn")
+var projectile = preload("res://objects/Projectile.tscn")
 
 func _ready():
 	pass

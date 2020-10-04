@@ -1,7 +1,9 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Environment/Material_Floor.material" type="Material" id=1]
-[ext_resource path="res://Environment/Steel.material" type="Material" id=2]
+[ext_resource path="res://environment/Material_Floor.material" type="Material" id=1]
+[ext_resource path="res://environment/Steel.material" type="Material" id=2]
+
+
 
 [sub_resource type="ArrayMesh" id=1]
 surfaces/0 = {
