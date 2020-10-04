@@ -1,13 +1,16 @@
 extends KinematicBody
 
 export var speed: float = 4.0
-export var lateral_acceleration: float = 20.0
+export var lateral_acceleration: float = 15.0
 export var jump_speed: float = 5.5
 
 onready var camera: Camera = get_tree().root.find_node("Camera", true, false)
 
 var dead = false
+var controllable = true
+var x_velocity: float = 0
 var y_velocity: float = 0
+var airborne = true
 
 func _ready() -> void:
 	pass
@@ -32,15 +35,46 @@ func _physics_process(delta: float) -> void:
 		move_and_slide(Vector3.UP * y_velocity, Vector3.UP, false, 4, 0.5)
 		if is_on_floor():
 			y_velocity = 0.0
-	
-	if is_on_floor() && Input.is_action_just_pressed("jump"):
+			airborne = false
+		else:
+			airborne = true
+
+	move_and_slide(Vector3.RIGHT * x_velocity, Vector3.UP, false, 4, 0.5)
+
+	if !controllable:
+		return
+
+	if !airborne && Input.is_action_just_pressed("jump"):
 		y_velocity = jump_speed
 		move_and_slide(Vector3.UP * y_velocity, Vector3.UP, false, 4, 0.5)
 
-	var direction = Vector3.ZERO
-	if Input.is_action_pressed("move_left"):
-		direction += Vector3.LEFT
-	if Input.is_action_pressed("move_right"):
-		direction += Vector3.RIGHT
-	direction = direction.normalized()
-	move_and_slide(direction * speed, Vector3.UP, false, 4, 0.5)
+	var x_target_velocity = (
+		(Input.get_action_strength("move_right") - Input.get_action_strength("move_left"))
+		* speed
+	)
+
+	var diff = x_target_velocity - x_velocity
+	var accel = lateral_acceleration * delta
+	x_velocity += min(abs(diff), abs(accel)) * sign(diff)
+	x_velocity = clamp(x_velocity, - speed, speed)
+
+#	# Horizontal movement code. First, get the player's input.
+#	var walk = WALK_FORCE * (Input.get_action_strength("move_right") - Input.get_action_strength("move_left"))
+#	# Slow down the player if they're not trying to move.
+#	if abs(walk) < WALK_FORCE * 0.2:
+#		# The velocity, slowed down a bit, and then reassigned.
+#		velocity.x = move_toward(velocity.x, 0, STOP_FORCE * delta)
+#	else:
+#		velocity.x += walk * delta
+#	# Clamp to the maximum horizontal movement speed.
+#	velocity.x = clamp(velocity.x, -WALK_MAX_SPEED, WALK_MAX_SPEED)
+#
+#	# Vertical movement code. Apply gravity.
+#	velocity.y += gravity * delta
+#
+#	# Move based on the velocity and snap to the ground.
+#	velocity = move_and_slide_with_snap(velocity, Vector3.DOWN, Vector3.UP)
+#
+#	# Check for jumping. is_on_floor() must be called after movement code.
+#	if is_on_floor() and Input.is_action_just_pressed("jump"):
+#		velocity.y = JUMP_SPEED
