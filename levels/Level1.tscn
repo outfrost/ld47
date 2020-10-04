@@ -10,15 +10,6 @@
 [ext_resource path="res://environment/Assets/Industrial_New_Wall_Panel_Empty.fbx" type="PackedScene" id=8]
 [ext_resource path="res://environment/Assets/Industrial_New_Wall_Panel_GrillFan.fbx" type="PackedScene" id=9]
 
-
-
-
-
-
-
-
-
-
 [node name="Spatial" type="Spatial"]
 
 [node name="SpawnPoint" type="Position3D" parent="."]

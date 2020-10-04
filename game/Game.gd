@@ -6,7 +6,7 @@ export var levels: Array
 onready var level_container: Node = get_node(@"LevelContainer")
 onready var menu: Control = get_node(@"MainMenu")
 
-var current_level: int = 0
+var current_level: int = -1
 var level: Node
 
 func _ready() -> void:
@@ -24,6 +24,9 @@ func on_start_game() -> void:
 
 func on_player_ded() -> void:
 	spawn_player()
+
+func on_level_finished() -> void:
+	next_level()
 
 func spawn_player() -> void:
 	var spawn_point: Spatial = level.find_node("SpawnPoint")
