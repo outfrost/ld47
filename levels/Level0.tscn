@@ -253,7 +253,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 4.5, 0 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 3, 0 )
 
 [node name="Spikes" type="Area" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 1, 0 )
 script = ExtResource( 3 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Spikes"]
