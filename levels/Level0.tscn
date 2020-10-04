@@ -1,11 +1,18 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://levels/Level.gd" type="Script" id=1]
-[ext_resource path="res://levels/arrow_hole.tscn" type="PackedScene" id=2]
+[ext_resource path="res://objects/arrow_hole.tscn" type="PackedScene" id=2]
+[ext_resource path="res://objects/Spikes.gd" type="Script" id=3]
 
 [sub_resource type="CubeMesh" id=1]
 
 [sub_resource type="BoxShape" id=2]
+
+[sub_resource type="PrismMesh" id=3]
+size = Vector3( 0.5, 0.5, 1 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 1, 0.25, 0.5 )
 
 [node name="Level0" type="Spatial"]
 script = ExtResource( 1 )
@@ -244,3 +251,31 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 4.5, 0 )
 
 [node name="Hole2" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 3, 0 )
+
+[node name="Spikes" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0 )
+script = ExtResource( 3 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Spikes"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0.25, 0 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="MeshInstance2" type="MeshInstance" parent="Spikes"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0.25, 0 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="MeshInstance3" type="MeshInstance" parent="Spikes"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 0.25, 0 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="MeshInstance4" type="MeshInstance" parent="Spikes"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.756189, 0.246263, 0.00432658 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Spikes"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0 )
+shape = SubResource( 4 )
