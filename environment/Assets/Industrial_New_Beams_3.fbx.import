@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Industrial_New_Beams_3.fbx-81de33234272b300d49eda8705ccbdf7.scn"
+path="res://.import/Industrial_New_Beams_3.fbx-df416806f282cd08a4f325875b7485b0.scn"
 
 [deps]
 
-source_file="res://Environment/Assets/Industrial_New_Beams_3.fbx"
-dest_files=[ "res://.import/Industrial_New_Beams_3.fbx-81de33234272b300d49eda8705ccbdf7.scn" ]
+source_file="res://environment/Assets/Industrial_New_Beams_3.fbx"
+dest_files=[ "res://.import/Industrial_New_Beams_3.fbx-df416806f282cd08a4f325875b7485b0.scn" ]
 
 [params]
 

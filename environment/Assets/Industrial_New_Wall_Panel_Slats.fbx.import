@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Industrial_New_Wall_Panel_Slats.fbx-3312b0a605b3ca1e40aa67a84d82a2ce.scn"
+path="res://.import/Industrial_New_Wall_Panel_Slats.fbx-6fb2a0c1cf7976c3ecb3555aa4081041.scn"
 
 [deps]
 
-source_file="res://Environment/Assets/Industrial_New_Wall_Panel_Slats.fbx"
-dest_files=[ "res://.import/Industrial_New_Wall_Panel_Slats.fbx-3312b0a605b3ca1e40aa67a84d82a2ce.scn" ]
+source_file="res://environment/Assets/Industrial_New_Wall_Panel_Slats.fbx"
+dest_files=[ "res://.import/Industrial_New_Wall_Panel_Slats.fbx-6fb2a0c1cf7976c3ecb3555aa4081041.scn" ]
 
 [params]
 

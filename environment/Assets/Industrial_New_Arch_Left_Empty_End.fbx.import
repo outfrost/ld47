@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Industrial_New_Arch_Left_Empty_End.fbx-6b1e8f44108a4075cd59901ffaf51489.scn"
+path="res://.import/Industrial_New_Arch_Left_Empty_End.fbx-3b9e6d4be22c86112d29132c7f0c195e.scn"
 
 [deps]
 
-source_file="res://Environment/Assets/Industrial_New_Arch_Left_Empty_End.fbx"
-dest_files=[ "res://.import/Industrial_New_Arch_Left_Empty_End.fbx-6b1e8f44108a4075cd59901ffaf51489.scn" ]
+source_file="res://environment/Assets/Industrial_New_Arch_Left_Empty_End.fbx"
+dest_files=[ "res://.import/Industrial_New_Arch_Left_Empty_End.fbx-3b9e6d4be22c86112d29132c7f0c195e.scn" ]
 
 [params]
 

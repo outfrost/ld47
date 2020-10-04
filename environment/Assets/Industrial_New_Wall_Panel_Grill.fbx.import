@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Industrial_New_Wall_Panel_Grill.fbx-5c2ccfe04d56820a8f0e66ac05846ae1.scn"
+path="res://.import/Industrial_New_Wall_Panel_Grill.fbx-d7375b164a09e72e0f9fe544768c1d43.scn"
 
 [deps]
 
-source_file="res://Environment/Assets/Industrial_New_Wall_Panel_Grill.fbx"
-dest_files=[ "res://.import/Industrial_New_Wall_Panel_Grill.fbx-5c2ccfe04d56820a8f0e66ac05846ae1.scn" ]
+source_file="res://environment/Assets/Industrial_New_Wall_Panel_Grill.fbx"
+dest_files=[ "res://.import/Industrial_New_Wall_Panel_Grill.fbx-d7375b164a09e72e0f9fe544768c1d43.scn" ]
 
 [params]
 
