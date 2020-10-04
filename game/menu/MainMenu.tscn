@@ -45,8 +45,8 @@ anchor_bottom = 0.5
 theme = ExtResource( 3 )
 custom_fonts/normal_font = SubResource( 1 )
 bbcode_enabled = true
-bbcode_text = "[center]idk what we're doing[/center]"
-text = "idk what we're doing"
+bbcode_text = "[center]Pillars of Anguish[/center]"
+text = "Pillars of Anguish"
 __meta__ = {
 "_edit_use_anchors_": false
 }
