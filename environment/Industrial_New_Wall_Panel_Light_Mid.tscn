@@ -9,18 +9,18 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.135, 1.7, -0.27 )
 light_color = Color( 0.729412, 1, 1, 1 )
 light_energy = 3.0
 spot_range = 10.0
-spot_attenuation = 3.0
-spot_angle = 90.0
+spot_attenuation = 4.0
+spot_angle = 89.99
 spot_angle_attenuation = 3.0
 __meta__ = {
 "_editor_description_": ""
 }
 
 [node name="FakeIndirectLight" type="OmniLight" parent="." index="2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.135, 1.7, -0.6 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.135, 1.7, -1 )
 light_color = Color( 0.729412, 1, 1, 1 )
 light_energy = 0.15
-light_indirect_energy = 0.0
+light_indirect_energy = 0.15
 light_specular = 0.15
 omni_range = 10.0
-omni_attenuation = 4.0
+omni_attenuation = 2.0
