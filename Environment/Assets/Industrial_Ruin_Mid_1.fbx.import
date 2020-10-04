@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Industrial_Ruin_Mid_1.fbx-cf59c39e2447de155c691ca45f8faa0a.scn"
+path="res://.import/Industrial_Ruin_Mid_1.fbx-78d4631555c59d62bc4aa0841817d02d.scn"
 
 [deps]
 
-source_file="res://Environment/Industrial_Ruin_Mid_1.fbx"
-dest_files=[ "res://.import/Industrial_Ruin_Mid_1.fbx-cf59c39e2447de155c691ca45f8faa0a.scn" ]
+source_file="res://Environment/Assets/Industrial_Ruin_Mid_1.fbx"
+dest_files=[ "res://.import/Industrial_Ruin_Mid_1.fbx-78d4631555c59d62bc4aa0841817d02d.scn" ]
 
 [params]
 
