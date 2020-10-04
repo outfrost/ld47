@@ -13,6 +13,8 @@ func _ready() -> void:
 	pass
 
 func _process(delta: float) -> void:
+	DebugLabel.display(self, "fps %d" % Performance.get_monitor(Performance.TIME_FPS))
+
 	if level && Input.is_action_just_pressed("menu"):
 		remove_level()
 		menu.show()
