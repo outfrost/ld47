@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Char1.fbx-2b230eac3f5a369a77b2f2c980fe521e.scn"
+path="res://.import/Industrial_Ruin_Arch_Left_End.fbx-fa965dbd2f8ba3658b64dce47ed71414.scn"
 
 [deps]
 
-source_file="res://Raw/Characters/Char1.fbx"
-dest_files=[ "res://.import/Char1.fbx-2b230eac3f5a369a77b2f2c980fe521e.scn" ]
+source_file="res://Environment/Industrial_Ruin_Arch_Left_End.fbx"
+dest_files=[ "res://.import/Industrial_Ruin_Arch_Left_End.fbx-fa965dbd2f8ba3658b64dce47ed71414.scn" ]
 
 [params]
 
