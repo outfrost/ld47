@@ -39,8 +39,11 @@ func spawn_player() -> void:
 	level.add_child(character)
 
 func next_level() -> void:
-	remove_level()
+	call_deferred("remove_level")
 	current_level = (current_level + 1) % levels.size()
+	call_deferred("next_level_2")
+
+func next_level_2() -> void:
 	call_deferred("spawn_level")
 
 func spawn_level() -> void:
