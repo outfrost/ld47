@@ -5,14 +5,16 @@ signal player_ded()
 export var speed: float = 4.0
 export var lateral_acceleration: float = 15.0
 export var jump_speed: float = 5.5
+export var death_height: float = 3.2
 
 onready var camera: Camera = get_tree().root.find_node("Camera", true, false)
+onready var last_elev: float = global_transform.origin.y
 
-var dead = false
-var controllable = true
+var dead: bool = false
+var controllable: bool = true
 var x_velocity: float = 0
 var y_velocity: float = 0
-var airborne = true
+var airborne: bool = true
 
 func _ready() -> void:
 	pass
@@ -39,6 +41,11 @@ func _physics_process(delta: float) -> void:
 			airborne = false
 		else:
 			airborne = true
+	
+	if !airborne:
+		if last_elev - global_transform.origin.y > death_height:
+			die()
+		last_elev = global_transform.origin.y
 
 	move_and_slide(Vector3.RIGHT * x_velocity, Vector3.UP, false, 4, 0.5)
 
