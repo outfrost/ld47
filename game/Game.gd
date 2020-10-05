@@ -63,6 +63,24 @@ func on_player_ded(reason: String) -> void:
 func on_level_finished() -> void:
 	next_level()
 
+func on_game_finished() -> void:
+	yield(get_tree().create_timer(4.0), "timeout")
+	narrative_popup.display("Well look at you.", 3.0)
+	yield(get_tree().create_timer(3.0), "timeout")
+	narrative_popup.display("You actually did it.", 4.0)
+	yield(get_tree().create_timer(4.0), "timeout")
+	narrative_popup.display("All of that pain and misery has brought you here."
+		+ " Into this blank void.", 7.0)
+	yield(get_tree().create_timer(7.0), "timeout")
+	narrative_popup.display("[i]\"What now\"[/i], you ask?", 4.0)
+	yield(get_tree().create_timer(4.0), "timeout")
+	narrative_popup.display("There was never a plan for anything.", 3.0)
+	yield(get_tree().create_timer(3.0), "timeout")
+	narrative_popup.display("Anyway, I've got a train to catch. Farewell.", 4.0)
+	yield(get_tree().create_timer(5.0), "timeout")
+	current_level = (current_level + 1) % levels.size()
+	back_to_menu()
+
 func back_to_menu() -> void:
 	remove_level()
 	narrative_popup.hide()
@@ -96,7 +114,7 @@ func spawn_level() -> void:
 	death_ct_label.bbcode_text = "Deaths: %d" % death_ct
 	match current_level:
 		0:
-			death_ct_label.hide()	#Hide label in case we circle back
+			death_ct_label.hide() # Hide label in case we circle back
 			yield(get_tree().create_timer(2.0), "timeout")
 			narrative_popup.display("Oh, hey there.", 4.0)
 			yield(get_tree().create_timer(4.0), "timeout")
@@ -114,7 +132,7 @@ func spawn_level() -> void:
 			narrative_popup.display("See that ledge in front of you? Jump off of it.", 6.0)
 #			yield(get_tree().create_timer(6.0), "timeout")
 		1:
-			death_ct_label.show()	#This will show the death count label in case we skip the first level before completing the tutorial
+			death_ct_label.show() # This will show the death count label in case we skip the first level before completing the tutorial
 
 func remove_level() -> void:
 	for node in level_container.get_children():
