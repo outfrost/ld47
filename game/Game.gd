@@ -16,6 +16,7 @@ var total_death_ct: int = 0
 var fall_death_ct: int = 0
 var fire_death_ct: int = 0
 var spikes_death_ct: int = 0
+var projectile_death_ct: int = 0
 var said_grilling_shashlik: bool = false
 var said_esc_trigger: bool = false
 var awaiting_esc_comeback: bool = false
@@ -112,8 +113,10 @@ func on_player_ded(reason: String) -> void:
 				"fall":
 					fall_death_ct += 1
 					match fall_death_ct:
-						10:
+						11:
 							narrative_popup.display("I forgot to ask. Are you afraid of heights?", 5.0)
+						16:
+							narrative_popup.display("Cool. A bonsai of dead bodies.", 5.0)
 				"fire":
 					fire_death_ct += 1
 					match fire_death_ct:
@@ -133,6 +136,17 @@ func on_player_ded(reason: String) -> void:
 							narrative_popup.display("Pretty sure going down in flames is not the objective here.", 6.0)
 						10:
 							narrative_popup.display("That's becoming an impressive pile of crisps.", 5.0)
+						16:
+							narrative_popup.display("Cool. A bonsai of dead bodies.", 5.0)
+				"projectile":
+					projectile_death_ct += 1
+					match projectile_death_ct:
+						1:
+							narrative_popup.display("Ah, here we go. You're gonna eat hot plasma now?", 5.0)
+						3:
+							narrative_popup.display("Pretty sure you're supposed to avoid those.", 5.0)
+						9:
+							narrative_popup.display("You took that one to the face, didn't you.", 5.0)
 
 func on_level_finished() -> void:
 	next_level()
