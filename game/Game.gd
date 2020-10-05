@@ -93,8 +93,10 @@ func spawn_level() -> void:
 	spawn_player()
 	total_death_ct += death_ct 
 	death_ct = 0
+	death_ct_label.bbcode_text = "Deaths: %d" % death_ct
 	match current_level:
 		0:
+			death_ct_label.hide()	#Hide label in case we circle back
 			yield(get_tree().create_timer(2.0), "timeout")
 			narrative_popup.display("Oh, hey there.", 4.0)
 			yield(get_tree().create_timer(4.0), "timeout")
@@ -111,6 +113,8 @@ func spawn_level() -> void:
 			yield(get_tree().create_timer(6.0), "timeout")
 			narrative_popup.display("See that ledge in front of you? Jump off of it.", 6.0)
 #			yield(get_tree().create_timer(6.0), "timeout")
+		1:
+			death_ct_label.show()	#This will show the death count label in case we skip the first level before completing the tutorial
 
 func remove_level() -> void:
 	for node in level_container.get_children():
