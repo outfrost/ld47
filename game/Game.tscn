@@ -70,7 +70,8 @@ __meta__ = {
 [node name="LevelContainer" type="Node" parent="."]
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 10 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9 )
 keep_aspect = 0
 environment = ExtResource( 9 )
 current = true
+fov = 80.0

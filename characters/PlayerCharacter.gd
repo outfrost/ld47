@@ -23,7 +23,7 @@ func _process(delta: float) -> void:
 	if dead:
 		return
 
-	var target_camera_pos = self.global_transform.origin + Vector3(3.0, 2.0, 10.0)
+	var target_camera_pos = self.global_transform.origin + Vector3(2.0, 1.0, 9.0)
 	camera.translation = lerp(camera.translation, target_camera_pos, clamp(delta * 4.0, 0.0, 1.0))
 
 	if controllable && Input.is_action_just_pressed("kill"):
@@ -31,7 +31,7 @@ func _process(delta: float) -> void:
 
 	if !is_on_floor():
 		y_velocity -= 9.8 * delta
-		move_and_slide(Vector3.UP * y_velocity, Vector3.UP, false, 4, 0.5)
+		move_and_slide(Vector3.UP * y_velocity, Vector3.UP, false, 4, 0.7)
 		if is_on_floor():
 			y_velocity = 0.0
 			airborne = false
@@ -43,13 +43,13 @@ func _process(delta: float) -> void:
 			die("fall")
 		last_elev = global_transform.origin.y
 
-	move_and_slide(Vector3.RIGHT * x_velocity, Vector3.UP, false, 4, 0.5)
+	move_and_slide(Vector3.RIGHT * x_velocity, Vector3.UP, false, 4, 0.7)
 
 	var x_target_velocity
 	if controllable:
 		if !airborne && Input.is_action_just_pressed("jump"):
 			y_velocity = jump_speed
-			move_and_slide(Vector3.UP * y_velocity, Vector3.UP, false, 4, 0.5)
+			move_and_slide(Vector3.UP * y_velocity, Vector3.UP, false, 4, 0.7)
 
 		x_target_velocity = (
 			(Input.get_action_strength("move_right") - Input.get_action_strength("move_left"))
