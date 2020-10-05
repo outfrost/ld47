@@ -34,7 +34,7 @@ script = ExtResource( 1 )
 transform = Transform( -0.1, 1.50996e-07, 0, -1.50996e-08, -1, 0, 0, 0, 0.1, 0, 1.12539, 0 )
 material_override = SubResource( 1 )
 cast_shadow = 0
-amount = 30
+amount = 48
 speed_scale = 6.0
 randomness = 1.0
 process_material = SubResource( 2 )
@@ -49,9 +49,9 @@ shape = SubResource( 4 )
 [node name="Light" type="OmniLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
 light_color = Color( 1, 0.533333, 0.0352941, 1 )
-light_energy = 5.0
-light_indirect_energy = 2.0
-omni_range = 7.0
-omni_attenuation = 3.0
+light_energy = 4.0
+light_specular = 1.0
+omni_range = 6.0
+omni_attenuation = 4.0
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
 [connection signal="body_exited" from="Area" to="." method="_on_Area_body_exited"]
