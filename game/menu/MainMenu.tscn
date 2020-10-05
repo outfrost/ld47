@@ -110,6 +110,7 @@ __meta__ = {
 }
 
 [node name="CreditsPopup" type="Popup" parent="."]
+visible = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
@@ -132,11 +133,11 @@ __meta__ = {
 }
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CreditsPopup/Panel"]
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
 margin_left = 16.0
 margin_top = 16.0
-margin_right = -16.0
+margin_right = -8.0
 margin_bottom = -16.0
 bbcode_enabled = true
 bbcode_text = "[center]3D art
@@ -151,9 +152,7 @@ Level design
 
 Programming
 [b]Outfrost[/b]
-[b]saveng0r[/b]
-
-Godot Engine 3.2.3[/center]"
+[b]saveng0r[/b][/center]"
 text = "3D art
 666Savior
 
@@ -166,6 +165,44 @@ Level design
 
 Programming
 Outfrost
-saveng0r
+saveng0r"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="CreditsPopup/Panel"]
+anchor_left = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 16.0
+margin_right = -16.0
+margin_bottom = -16.0
+bbcode_enabled = true
+bbcode_text = "[center]Music
+[b]Marek Domagała[/b]
+
+Sound effects
+[b]freesound.org users:[/b]
+aboe
+cheatsman115
+farbin
+unfa
+
+
+
+
+
+Godot Engine 3.2.3[/center]"
+text = "Music
+Marek Domagała
+
+Sound effects
+freesound.org users:
+aboe
+cheatsman115
+farbin
+unfa
+
+
+
+
 
 Godot Engine 3.2.3"
