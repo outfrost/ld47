@@ -8,7 +8,7 @@ onready var menu: Control = get_node(@"MainMenu")
 onready var narrative_popup: NarrativePopup = get_node(@"NarrativePopup")
 onready var death_ct_label: RichTextLabel = get_node(@"DeathCtLabel")
 
-var current_level: int = -1
+var current_level: int = 0
 var level: Node
 
 var death_ct: int = 0
@@ -28,7 +28,7 @@ func _process(delta: float) -> void:
 		next_level()
 
 func on_start_game() -> void:
-	current_level = -1
+	current_level -= 1
 	next_level()
 
 func on_player_ded(reason: String) -> void:
