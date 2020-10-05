@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://environment/Industrial_New_Beams_3_Floor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://environment/Industrial_New_Arch_Left_Empty_End.tscn" type="PackedScene" id=2]
@@ -23,6 +23,7 @@
 [ext_resource path="res://environment/Industrial_New_Beams_2.tscn" type="PackedScene" id=21]
 [ext_resource path="res://environment/Assets/Industrial_New_Pipe_RightAngle_1x2M.fbx" type="PackedScene" id=22]
 [ext_resource path="res://objects/Spikes.tscn" type="PackedScene" id=23]
+[ext_resource path="res://objects/fire_hole.tscn" type="PackedScene" id=24]
 [ext_resource path="res://environment/Assets/Industrial_New_Wall_Panel_Andled_Empty.fbx" type="PackedScene" id=25]
 [ext_resource path="res://environment/Industrial_New_Pipe_4M.tscn" type="PackedScene" id=26]
 [ext_resource path="res://environment/Assets/Industrial_New_Pipe_RightAngle.fbx" type="PackedScene" id=27]
@@ -595,6 +596,21 @@ transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 44, 0.5
 
 [node name="Spikes12" parent="." instance=ExtResource( 23 )]
 transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 52, 2.5, 0 )
+
+[node name="fire_hole" parent="." instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.875, -3.5, 1.5 )
+
+[node name="fire_hole3" parent="." instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.875, -3.125, 1.5 )
+
+[node name="fire_hole5" parent="." instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 35.875, 2.875, 1.5 )
+
+[node name="fire_hole2" parent="." instance=ExtResource( 24 )]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 52.8, -0.5, 1.35 )
+
+[node name="fire_hole4" parent="." instance=ExtResource( 24 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 54, 4.75, 1.5 )
 
 [node name="Industrial_New_Wall_Panel_Empty21" parent="." instance=ExtResource( 15 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 15, -2, 1.5 )

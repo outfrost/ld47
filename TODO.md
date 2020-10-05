@@ -3,6 +3,7 @@
 * [ ] Tweak player movement
 * [ ] Do the writing
 	"Hey, press [Esc] and see what happens."
+	"Well done. You're pretty well done."
 * [ ] Do the sounds
 	* [ ] Music track
 	* [ ] SFX
