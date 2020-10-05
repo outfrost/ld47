@@ -14,3 +14,5 @@
 * [ ] Take screenshots
 * [ ] Write a description
 * [ ] Check final builds
+
+* Show total deaths at the end

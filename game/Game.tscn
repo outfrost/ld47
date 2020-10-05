@@ -44,6 +44,21 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="DeathCtPanel" type="Panel" parent="."]
+visible = false
+anchor_left = 0.05
+anchor_top = 0.08
+anchor_right = 0.05
+anchor_bottom = 0.08
+margin_left = -8.0
+margin_top = -8.0
+margin_right = 328.0
+margin_bottom = 88.0
+theme = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="DeathCtLabel" type="RichTextLabel" parent="."]
 visible = false
 anchor_left = 0.05

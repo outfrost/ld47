@@ -16,14 +16,16 @@ var x_velocity: float = 0
 var y_velocity: float = 0
 var airborne: bool = true
 
+var camera_offset: Vector3 = Vector3(2.0, 1.0, 9.0)
+
 func _ready() -> void:
-	camera.translation = self.global_transform.origin + Vector3(2.0, 1.0, 9.0)
+	camera.translation = self.global_transform.origin + camera_offset
 
 func _process(delta: float) -> void:
 	if dead:
 		return
 
-	var target_camera_pos = self.global_transform.origin + Vector3(2.0, 1.0, 9.0)
+	var target_camera_pos = self.global_transform.origin + camera_offset
 	camera.translation = lerp(camera.translation, target_camera_pos, clamp(delta * 4.0, 0.0, 1.0))
 
 	if controllable && Input.is_action_just_pressed("kill"):
