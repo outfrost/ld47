@@ -11,6 +11,7 @@ func _ready():
 
 func _process(delta):
 	if stopped:
+		set_process(false)
 		collision_layer = 0
 		collision_mask = 0
 		$MeshInstance.hide()
