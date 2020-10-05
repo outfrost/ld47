@@ -8,7 +8,7 @@
 	* [ ] Music track
 	* [ ] SFX
 * [x] Ending screen
-* [ ] Insert fire thingies if no level 3
+* [x] Insert fire thingies if no level 3
 * [ ] Keybind to restart level
 * [ ] Maybe a menu background?
 * [ ] Take screenshots
