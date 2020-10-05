@@ -115,6 +115,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Panel" type="Panel" parent="CreditsPopup"]
 anchor_left = 0.25
@@ -127,3 +130,42 @@ custom_styles/panel = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CreditsPopup/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 16.0
+margin_top = 16.0
+margin_right = -16.0
+margin_bottom = -16.0
+bbcode_enabled = true
+bbcode_text = "[center]3D art
+[b]666Savior[/b]
+
+Game design
+[b]666Savior[/b]
+[b]Outfrost[/b]
+
+Level design
+[b]666Savior[/b]
+
+Programming
+[b]Outfrost[/b]
+[b]saveng0r[/b]
+
+Godot Engine 3.2.3[/center]"
+text = "3D art
+666Savior
+
+Game design
+666Savior
+Outfrost
+
+Level design
+666Savior
+
+Programming
+Outfrost
+saveng0r
+
+Godot Engine 3.2.3"
