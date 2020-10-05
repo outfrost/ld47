@@ -36,6 +36,7 @@ margin_bottom = -16.0
 bbcode_enabled = true
 bbcode_text = "Let's type a message in here"
 text = "Let's type a message in here"
+scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
