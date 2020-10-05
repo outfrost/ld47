@@ -3,7 +3,7 @@
 [ext_resource path="res://objects/Spikes.gd" type="Script" id=1]
 [ext_resource path="res://environment/Industrial_Ruin_Floor_Spike1.tscn" type="PackedScene" id=2]
 
-[sub_resource type="BoxShape" id=3]
+[sub_resource type="BoxShape" id=1]
 extents = Vector3( 0.8, 0.275, 1.5 )
 
 [node name="Spikes" type="Area"]
@@ -13,4 +13,4 @@ script = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, 0.65, -1.5 )
-shape = SubResource( 3 )
+shape = SubResource( 1 )
