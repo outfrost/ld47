@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://fonts/Noto/NotoMono-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://game/DebugLabel.gd" type="Script" id=2]
@@ -11,7 +11,6 @@
 [ext_resource path="res://camera_env.tres" type="Environment" id=9]
 [ext_resource path="res://game/ui-theme/ui_theme.tres" type="Theme" id=10]
 [ext_resource path="res://fonts/Merriweather/Merriweather-Regular.ttf" type="DynamicFontData" id=11]
-[ext_resource path="res://levels/Level2.tscn" type="PackedScene" id=12]
 
 [sub_resource type="DynamicFont" id=1]
 size = 20
@@ -27,7 +26,7 @@ font_data = ExtResource( 11 )
 [node name="Game" type="Node"]
 script = ExtResource( 4 )
 player_character = ExtResource( 6 )
-levels = [ ExtResource( 7 ), ExtResource( 12 ), ExtResource( 5 ) ]
+levels = [ ExtResource( 7 ), ExtResource( 5 ) ]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 99
