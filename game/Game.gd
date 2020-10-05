@@ -23,6 +23,9 @@ func _process(delta: float) -> void:
 	if level && Input.is_action_just_pressed("menu"):
 		back_to_menu()
 
+	if level && Input.is_action_just_pressed("next_level"):
+		next_level()
+
 func on_start_game() -> void:
 	current_level = -1
 	next_level()
