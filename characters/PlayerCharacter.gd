@@ -58,6 +58,8 @@ func _process(delta: float) -> void:
 	else:
 		x_target_velocity = 0.0
 
+	$Char2_positioned/Char2.walking = !is_equal_approx(x_target_velocity, 0.0)
+
 	var diff = x_target_velocity - x_velocity
 	var accel = lateral_acceleration * delta
 	x_velocity += min(abs(diff), abs(accel)) * sign(diff)
