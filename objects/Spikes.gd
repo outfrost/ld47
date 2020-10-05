@@ -5,4 +5,5 @@ func _ready() -> void:
 
 func on_body_entered(body: Node) -> void:
 	if body.has_method("die"):
+		$AudioStreamPlayer3D.play()
 		body.die("spikes")

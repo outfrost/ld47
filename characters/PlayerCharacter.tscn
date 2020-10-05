@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://characters/PlayerCharacter.gd" type="Script" id=1]
 [ext_resource path="res://characters/Char2_positioned.tscn" type="PackedScene" id=2]
+[ext_resource path="res://sounds/36791__farbin__muted-thud-2.wav" type="AudioStream" id=3]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 0.15, 0.3, 0.62 )
@@ -14,3 +15,7 @@ transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0
 shape = SubResource( 1 )
 
 [node name="Char2_positioned" parent="." instance=ExtResource( 2 )]
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource( 3 )
+unit_db = 9.0

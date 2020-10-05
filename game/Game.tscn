@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://fonts/Noto/NotoMono-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://game/DebugLabel.gd" type="Script" id=2]
 [ext_resource path="res://game/menu/MainMenu.tscn" type="PackedScene" id=3]
 [ext_resource path="res://game/Game.gd" type="Script" id=4]
+[ext_resource path="res://sounds/Uncharted Lands.ogg" type="AudioStream" id=5]
 [ext_resource path="res://characters/PlayerCharacter.tscn" type="PackedScene" id=6]
 [ext_resource path="res://levels/Level1.tscn" type="PackedScene" id=7]
 [ext_resource path="res://game/NarrativePopup.tscn" type="PackedScene" id=8]
@@ -83,6 +84,11 @@ __meta__ = {
 [node name="MainMenu" parent="." instance=ExtResource( 3 )]
 
 [node name="LevelContainer" type="Node" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -21.0
+autoplay = true
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9 )

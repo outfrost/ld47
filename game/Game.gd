@@ -8,7 +8,7 @@ onready var menu: Control = get_node(@"MainMenu")
 onready var narrative_popup: NarrativePopup = get_node(@"NarrativePopup")
 onready var death_ct_label: RichTextLabel = get_node(@"DeathCtLabel")
 
-var current_level: int = 2
+var current_level: int = 0
 var level: Node
 var character: Spatial
 

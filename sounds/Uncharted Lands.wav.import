@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Uncharted Lands.wav-b5a3603b682b652733deda56b4ed7f3e.sample"
+
+[deps]
+
+source_file="res://sounds/Uncharted Lands.wav"
+dest_files=[ "res://.import/Uncharted Lands.wav-b5a3603b682b652733deda56b4ed7f3e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

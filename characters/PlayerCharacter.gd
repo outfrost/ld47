@@ -42,6 +42,7 @@ func _process(delta: float) -> void:
 	
 	if !airborne:
 		if last_elev - global_transform.origin.y > death_height:
+			$AudioStreamPlayer3D.play()
 			die("fall")
 		last_elev = global_transform.origin.y
 

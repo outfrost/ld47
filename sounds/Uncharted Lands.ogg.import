@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Uncharted Lands.ogg-926af426d4711b35ec672c81c02a451a.oggstr"
+
+[deps]
+
+source_file="res://sounds/Uncharted Lands.ogg"
+dest_files=[ "res://.import/Uncharted Lands.ogg-926af426d4711b35ec672c81c02a451a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -32,6 +32,7 @@ func _process(delta):
 			# the following code needs the correct calculation of the position/origin
 			stopped = true
 			if collision.collider.has_method("die"):
+				$AudioStreamPlayer3D.play()
 				collision.collider.die("projectile")
 			#get_parent().remove_child(self)
 			#collision.collider.add_child(self)
