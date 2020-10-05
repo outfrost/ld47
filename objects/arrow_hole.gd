@@ -3,7 +3,8 @@ extends Spatial
 var projectile = preload("res://objects/Projectile.tscn")
 
 func _ready():
-	pass
+	yield(get_tree().create_timer(0.2), "timeout")
+	_on_Timer_timeout()
 
 func _on_Timer_timeout():
 	var p = projectile.instance()
