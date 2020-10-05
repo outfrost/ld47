@@ -18,7 +18,7 @@ func _process(delta):
 			# good would be, if it follows the player (get stuck inside the player)
 			# the following code needs the correct calculation of the position/origin
 			if collision.collider.has_method("die"):
-				collision.collider.die()
+				collision.collider.die("projectile")
 			#get_parent().remove_child(self)
 			#collision.collider.add_child(self)
 			#global_transform.origin = collision.collider.global_transform.origin - global_transform.origin

@@ -5,4 +5,4 @@ func _ready() -> void:
 
 func on_body_entered(body: Node) -> void:
 	if body.has_method("die"):
-		body.die()
+		body.die("spikes")

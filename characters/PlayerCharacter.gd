@@ -1,6 +1,6 @@
 extends KinematicBody
 
-signal player_ded()
+signal player_ded(reason)
 
 export var speed: float = 4.0
 export var lateral_acceleration: float = 15.0
@@ -27,7 +27,7 @@ func _process(delta: float) -> void:
 	camera.translation = lerp(camera.translation, target_camera_pos, clamp(delta * 4.0, 0.0, 1.0))
 
 	if controllable && Input.is_action_just_pressed("kill"):
-		die()
+		die("suicide")
 
 	if !is_on_floor():
 		y_velocity -= 9.8 * delta
@@ -40,7 +40,7 @@ func _process(delta: float) -> void:
 	
 	if !airborne:
 		if last_elev - global_transform.origin.y > death_height:
-			die()
+			die("fall")
 		last_elev = global_transform.origin.y
 
 	move_and_slide(Vector3.RIGHT * x_velocity, Vector3.UP, false, 4, 0.5)
@@ -84,11 +84,11 @@ func _process(delta: float) -> void:
 #	if is_on_floor() and Input.is_action_just_pressed("jump"):
 #		velocity.y = JUMP_SPEED
 
-func die() -> void:
+func die(reason: String) -> void:
 	if !controllable:
 		return
 	rotate_z(TAU / 4.0)
 	controllable = false
 	yield(get_tree().create_timer(2.0), "timeout")
 	dead = true
-	emit_signal("player_ded")
+	emit_signal("player_ded", reason)

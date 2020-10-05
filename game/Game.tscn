@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://fonts/Noto/NotoMono-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://game/DebugLabel.gd" type="Script" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://levels/Level1.tscn" type="PackedScene" id=7]
 [ext_resource path="res://game/NarrativePopup.tscn" type="PackedScene" id=8]
 [ext_resource path="res://camera_env.tres" type="Environment" id=9]
+[ext_resource path="res://game/ui-theme/ui_theme.tres" type="Theme" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 size = 20
@@ -31,6 +32,22 @@ custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_as_outline = 2
 text = "DebugLabel"
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DeathCtLabel" type="RichTextLabel" parent="."]
+anchor_left = 0.05
+anchor_top = 0.08
+anchor_right = 0.05
+anchor_bottom = 0.08
+margin_top = 0.0800018
+margin_right = 361.0
+margin_bottom = 124.08
+theme = ExtResource( 10 )
+bbcode_enabled = true
+bbcode_text = "Deaths: 50"
+text = "Deaths: 50"
 __meta__ = {
 "_edit_use_anchors_": false
 }

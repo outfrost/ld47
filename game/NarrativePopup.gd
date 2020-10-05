@@ -1,7 +1,7 @@
 class_name NarrativePopup
 extends Popup
 
-const TIME_PER_CHAR: float = 0.04
+const TIME_PER_CHAR: float = 0.03
 
 var time_displayed: float = 0.0
 var duration: float = 0.0

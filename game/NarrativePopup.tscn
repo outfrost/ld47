@@ -5,18 +5,26 @@
 [ext_resource path="res://game/ui-theme/panel_style_transparent.tres" type="StyleBox" id=3]
 
 [node name="NarrativePopup" type="Popup"]
-anchor_left = 0.55
+anchor_left = 0.65
 anchor_top = 0.1
 anchor_right = 0.95
-anchor_bottom = 0.25
+anchor_bottom = 0.22
+margin_left = -116.0
+margin_bottom = 80.96
 grow_horizontal = 0
 theme = ExtResource( 1 )
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Panel" type="Panel" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 custom_styles/panel = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
 anchor_right = 1.0

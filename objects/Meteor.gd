@@ -15,7 +15,7 @@ func _physics_process(delta):
 	if collision:
 		set_physics_process(false)
 		if collision.collider.has_method("die"):
-			collision.collider.die()
+			collision.collider.die("meteor")
 		collision_layer = 0
 		collision_mask = 0
 		$MeshInstance.visible = false
