@@ -1,8 +1,8 @@
 extends KinematicBody
 
 const MAX_TRAVEL_DIST: float = 14.0
-const SPEED: float = 20.0
-var direction: Vector3
+const SPEED: float = 15.0
+var direction: Vector3 = Vector3.RIGHT
 var stopped: bool = false
 var distance_travelled: float = 0.0
 
