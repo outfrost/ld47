@@ -270,6 +270,7 @@ func spawn_level() -> void:
 		yield(get_tree().create_timer(5.0), "timeout")
 		narrative_popup.display("It's easy to get you to do things. Even dumb ones.", 6.0)
 		awaiting_esc_comeback = false
+		character.controllable = true
 		return
 	match current_level:
 		0:
