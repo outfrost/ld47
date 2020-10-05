@@ -17,7 +17,7 @@ var y_velocity: float = 0
 var airborne: bool = true
 
 func _ready() -> void:
-	pass
+	camera.translation = self.global_transform.origin + Vector3(2.0, 1.0, 9.0)
 
 func _process(delta: float) -> void:
 	if dead:

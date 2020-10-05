@@ -1,10 +1,9 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://fonts/Noto/NotoMono-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://game/DebugLabel.gd" type="Script" id=2]
 [ext_resource path="res://game/menu/MainMenu.tscn" type="PackedScene" id=3]
 [ext_resource path="res://game/Game.gd" type="Script" id=4]
-[ext_resource path="res://levels/Level0.tscn" type="PackedScene" id=5]
 [ext_resource path="res://characters/PlayerCharacter.tscn" type="PackedScene" id=6]
 [ext_resource path="res://levels/Level1.tscn" type="PackedScene" id=7]
 [ext_resource path="res://game/NarrativePopup.tscn" type="PackedScene" id=8]
@@ -28,7 +27,7 @@ font_data = ExtResource( 11 )
 [node name="Game" type="Node"]
 script = ExtResource( 4 )
 player_character = ExtResource( 6 )
-levels = [ ExtResource( 7 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 5 ) ]
+levels = [ ExtResource( 7 ), ExtResource( 12 ), ExtResource( 13 ) ]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 99
