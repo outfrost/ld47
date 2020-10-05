@@ -1,22 +1,687 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://environment/Industrial_New_Mid_Empty_1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://environment/Industrial_New_Arch_Left_Empty_End.tscn" type="PackedScene" id=2]
 [ext_resource path="res://game/FinishPoint.tscn" type="PackedScene" id=3]
+[ext_resource path="res://environment/Industrial_New_Blocker_Empty.tscn" type="PackedScene" id=4]
+[ext_resource path="res://environment/Industrial_New_Floor_Plain.tscn" type="PackedScene" id=5]
+[ext_resource path="res://environment/Industrial_New_Floor_Grate_Pipes.tscn" type="PackedScene" id=6]
+[ext_resource path="res://environment/Industrial_New_Beams_3.tscn" type="PackedScene" id=7]
+[ext_resource path="res://environment/Assets/Industrial_New_Wall_Panel_Empty.fbx" type="PackedScene" id=8]
+[ext_resource path="res://environment/Assets/Industrial_New_Wall_Panel_Slats.fbx" type="PackedScene" id=9]
+[ext_resource path="res://environment/Assets/Industrial_New_Wall_Panel_GrillFan.fbx" type="PackedScene" id=10]
+[ext_resource path="res://environment/Assets/Industrial_New_Wall_Panel_Grill.fbx" type="PackedScene" id=11]
+[ext_resource path="res://environment/Industrial_New_Wall_Panel_Light_Mid.tscn" type="PackedScene" id=12]
+[ext_resource path="res://environment/Assets/Industrial_New_Wall_Panel_Andled_Empty.fbx" type="PackedScene" id=13]
+[ext_resource path="res://environment/Industrial_New_Beams_1.tscn" type="PackedScene" id=14]
+[ext_resource path="res://objects/Spikes.tscn" type="PackedScene" id=15]
+[ext_resource path="res://environment/Industrial_New_Beams_3_Floor.tscn" type="PackedScene" id=16]
+[ext_resource path="res://objects/arrow_hole.tscn" type="PackedScene" id=17]
+[ext_resource path="res://environment/Industrial_Ruin_Arch_Left_End.tscn" type="PackedScene" id=18]
 
 [node name="Spatial" type="Spatial"]
 
 [node name="SpawnPoint" type="Position3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.424, 1 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 1.35 )
 
 [node name="FinishPoint" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.01307, 4.76837e-07, -0.0317187 )
 
 [node name="Industrial_New_Arch_Left_Empty_End" parent="." instance=ExtResource( 2 )]
 transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 4, 0 )
 
+[node name="Industrial_New_Arch_Left_Empty_End2" parent="." instance=ExtResource( 2 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 6, 4, 0 )
+
+[node name="Industrial_New_Arch_Left_Empty_End3" parent="." instance=ExtResource( 2 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 12, 4, 0 )
+
+[node name="Industrial_New_Arch_Left_Empty_End4" parent="." instance=ExtResource( 2 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 18, 4, 0 )
+
 [node name="Industrial_New_Mid_Empty_1" parent="." instance=ExtResource( 1 )]
 transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0, 0 )
 
+[node name="Industrial_New_Mid_Empty_4" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 6, 0, 0 )
+
+[node name="Industrial_New_Mid_Empty_5" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 12, 0, 0 )
+
+[node name="Industrial_New_Mid_Empty_6" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 18, 0, 0 )
+
+[node name="Industrial_New_Mid_Empty_7" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 12, -4, 0 )
+
+[node name="Industrial_New_Mid_Empty_9" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 24, -4, 0 )
+
+[node name="Industrial_New_Mid_Empty_11" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 30, -4, 0 )
+
+[node name="Industrial_New_Mid_Empty_17" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 24, -8, 0 )
+
+[node name="Industrial_New_Mid_Empty_18" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 30, -8, 0 )
+
+[node name="Industrial_New_Mid_Empty_19" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 36, -8, 0 )
+
+[node name="Industrial_New_Mid_Empty_20" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 42, -8, 0 )
+
+[node name="Industrial_New_Mid_Empty_22" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 30, -12, 0 )
+
+[node name="Industrial_New_Mid_Empty_23" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 36, -12, 0 )
+
+[node name="Industrial_New_Mid_Empty_24" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 42, -12, 0 )
+
+[node name="Industrial_New_Mid_Empty_27" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 48, -8, 0 )
+
+[node name="Industrial_New_Mid_Empty_29" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 54, -8, 0 )
+
+[node name="Industrial_New_Mid_Empty_30" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 54, -4, 0 )
+
+[node name="Industrial_New_Mid_Empty_31" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 48, -4, 0 )
+
+[node name="Industrial_New_Mid_Empty_25" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 36, -16, 0 )
+
+[node name="Industrial_New_Mid_Empty_26" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 42, -16, 0 )
+
+[node name="Industrial_New_Mid_Empty_28" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 30, -16, 0 )
+
+[node name="Industrial_New_Mid_Empty_12" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 30, 0, 0 )
+
+[node name="Industrial_New_Mid_Empty_14" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 36, -4, 0 )
+
+[node name="Industrial_New_Mid_Empty_15" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 42, -4, 0 )
+
+[node name="Industrial_New_Mid_Empty_10" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 24, 0, 0 )
+
+[node name="Industrial_New_Mid_Empty_8" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 18, -4, 0 )
+
+[node name="Industrial_New_Wall_Panel_Slats4" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, 6.51683e-07 )
+
+[node name="Industrial_New_Wall_Panel_Slats5" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -1.30336e-06 )
+
+[node name="Industrial_New_Wall_Panel_Slats9" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -2, -2.60672e-06 )
+
+[node name="Industrial_New_Wall_Panel_Slats6" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -1.95505e-06 )
+
+[node name="Industrial_New_Wall_Panel_Slats7" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16, -12, -5.21346e-06 )
+
+[node name="Industrial_New_Wall_Panel_Slats11" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16, -6, -5.21346e-06 )
+
+[node name="Industrial_New_Wall_Panel_Slats12" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -6, -3.91009e-06 )
+
+[node name="Industrial_New_Wall_Panel_Slats8" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -12, -6.51683e-06 )
+
+[node name="Industrial_New_Wall_Panel_GrillFan4" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2, -6.51683e-07 )
+
+[node name="Industrial_New_Wall_Panel_GrillFan5" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 2, -2.60673e-06 )
+
+[node name="Industrial_New_Wall_Panel_GrillFan11" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22, -2, -7.16851e-06 )
+
+[node name="Industrial_New_Wall_Panel_GrillFan12" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16, -2, -5.21346e-06 )
+
+[node name="Industrial_New_Wall_Panel_GrillFan10" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30, -2, -9.77524e-06 )
+
+[node name="Industrial_New_Wall_Panel_GrillFan6" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -12, -3.9101e-06 )
+
+[node name="Industrial_New_Wall_Panel_GrillFan7" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18, -12, -5.86514e-06 )
+
+[node name="Industrial_New_Wall_Panel_GrillFan8" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24, -12, -7.82019e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty26" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 6.51683e-07 )
+
+[node name="Industrial_New_Wall_Panel_Empty27" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+
+[node name="Industrial_New_Wall_Panel_Empty29" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -2.60673e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty37" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -3.25841e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty62" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, -4.56178e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty63" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14, -2, -4.56178e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty64" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -2, -3.91009e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty65" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -4, -3.91009e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty66" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14, -4, -4.56178e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty67" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14, -6, -4.56178e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty68" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -6, -6.51682e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty69" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22, -6, -7.16851e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty70" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24, -6, -7.82019e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty71" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24, -4, -7.82019e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty72" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22, -4, -7.16851e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty38" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -3.91009e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty53" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0, -7.16851e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty54" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, -7.82019e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty55" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 0, -8.47187e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty73" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 0, -9.12355e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty74" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -9.77524e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty75" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, -1.04269e-05 )
+
+[node name="Industrial_New_Wall_Panel_Empty39" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18, -4, -5.86514e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty40" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16, -4, -5.21346e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty41" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -4, -6.51682e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty76" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -2, -6.51682e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty77" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, -6.51682e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty43" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22, -12, -7.16851e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty44" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14, -12, -4.56177e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty45" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -10, -3.91009e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty46" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14, -10, -4.56177e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty47" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16, -10, -5.21346e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty56" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16, -8, -5.21346e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty57" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -8, -3.91009e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty58" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14, -8, -4.56177e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty59" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -8, -6.51682e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty60" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22, -8, -7.1685e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty61" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24, -8, -7.82018e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty48" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18, -10, -5.86514e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty49" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -10, -6.51682e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty50" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22, -10, -7.1685e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty51" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24, -10, -7.82019e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty42" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18, -6, -5.86514e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty52" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18, -8, -5.86514e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty30" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 2, -1.95505e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty35" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -2, -1.95505e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty36" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -2, -1.30336e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty32" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 2, -1.30336e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty33" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 4, -1.30336e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty34" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 4, -2.60673e-06 )
+
+[node name="Industrial_New_Wall_Panel_Empty28" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -6.51683e-07 )
+
+[node name="Industrial_New_Wall_Panel_Empty31" parent="Industrial_New_Mid_Empty_8" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
+
 [node name="Industrial_New_Mid_Empty_2" parent="." instance=ExtResource( 1 )]
-transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, -3, 0, 3 )
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, -3.25, 0, 3 )
+
+[node name="Industrial_New_Mid_Empty_3" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, 2.75, 0, 3 )
+
+[node name="Industrial_New_Floor_Grate_Pipes" parent="." instance=ExtResource( 6 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -2, 0.5, 0 )
+
+[node name="Industrial_New_Floor_Grate_Pipes2" parent="." instance=ExtResource( 6 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 2, 0.5, 0 )
+
+[node name="Industrial_New_Floor_Grate_Pipes5" parent="." instance=ExtResource( 6 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 4, 0.5, 0 )
+
+[node name="Industrial_New_Wall_Panel_Empty" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -3, 0, 1.25 )
+
+[node name="Industrial_New_Wall_Panel_Empty6" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -3, 2, 1.25 )
+
+[node name="Industrial_New_Wall_Panel_Empty7" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -3, 2, 3.25 )
+
+[node name="Industrial_New_Wall_Panel_Empty8" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -3, 2, 5.25 )
+
+[node name="Industrial_New_Wall_Panel_Empty2" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -3, 0, 3.25 )
+
+[node name="Industrial_New_Wall_Panel_Empty3" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -3, 0, 5.25 )
+
+[node name="Industrial_New_Wall_Panel_Empty9" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 3, 2, 3.25 )
+
+[node name="Industrial_New_Wall_Panel_Empty13" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 3, 2, 1.25 )
+
+[node name="Industrial_New_Wall_Panel_Empty10" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 3, 2, 5.25 )
+
+[node name="Industrial_New_Wall_Panel_Empty11" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 3, 0, 3.25 )
+
+[node name="Industrial_New_Wall_Panel_Empty12" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 2.99234, -0.0102549, 5.28601 )
+
+[node name="Industrial_New_Wall_Panel_Empty23" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 11, -2, 1.5 )
+
+[node name="Industrial_New_Wall_Panel_Empty34" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 21, 0, 1.5 )
+
+[node name="Industrial_New_Wall_Panel_Empty35" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 21, -2, 1.5 )
+
+[node name="Industrial_New_Wall_Panel_Empty24" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 11, -4, 1.5 )
+
+[node name="Industrial_New_Wall_Panel_Empty26" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 21, -6, 1.5 )
+
+[node name="Industrial_New_Wall_Panel_Empty27" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 29, -8, 1.5 )
+
+[node name="Industrial_New_Wall_Panel_Empty28" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 29, -10, 1.5 )
+
+[node name="Industrial_New_Wall_Panel_Empty31" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 29, -12, 1.5 )
+
+[node name="Industrial_New_Wall_Panel_Empty36" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 29, -14, 1.5 )
+
+[node name="Industrial_New_Wall_Panel_Empty37" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 29, -16, 1.5 )
+
+[node name="Industrial_New_Wall_Panel_Empty38" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 43, -8, 1.5 )
+
+[node name="Industrial_New_Wall_Panel_Empty39" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 43, -10, 1.5 )
+
+[node name="Industrial_New_Wall_Panel_Empty40" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 43, -12, 1.5 )
+
+[node name="Industrial_New_Wall_Panel_Empty41" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 43, -14, 1.5 )
+
+[node name="Industrial_New_Wall_Panel_Empty42" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 43, -16, 1.5 )
+
+[node name="Industrial_New_Floor_Plain" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0.5, 0 )
+
+[node name="Industrial_New_Floor_Plain3" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 6, 0.5, 0 )
+
+[node name="Industrial_New_Floor_Plain4" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 8, 0.5, 0 )
+
+[node name="Industrial_New_Floor_Plain5" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 10, 0.5, 0 )
+
+[node name="Industrial_New_Floor_Plain6" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 12, -3.5, 0 )
+
+[node name="Industrial_New_Floor_Plain7" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 14, -3.5, 0 )
+
+[node name="Industrial_New_Floor_Plain8" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 18, -3.5, 0 )
+
+[node name="Industrial_New_Floor_Plain9" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 19.9834, -3.48521, -0.000141144 )
+
+[node name="Industrial_New_Floor_Plain10" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 27.9834, -5.48521, -0.000141144 )
+
+[node name="Industrial_New_Floor_Plain12" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 43.9834, -5.48521, -0.000141144 )
+
+[node name="Industrial_New_Floor_Plain13" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 51.9834, -5.48521, -0.000141144 )
+
+[node name="Industrial_New_Floor_Plain14" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 55.9834, -5.48521, -0.000141144 )
+
+[node name="Industrial_New_Floor_Plain11" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 35.9834, -7.48521, -0.000141144 )
+
+[node name="Industrial_New_Floor_Grate_Pipes3" parent="." instance=ExtResource( 6 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -2, 0.5, 2.6 )
+
+[node name="Industrial_New_Floor_Grate_Pipes4" parent="." instance=ExtResource( 6 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 2, 0.5, 2.6 )
+
+[node name="Industrial_New_Floor_Plain2" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0.5, 2.6 )
+
+[node name="Industrial_New_Beams_3" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0.5, 0 )
+
+[node name="Industrial_New_Wall_Panel_Light_Mid" parent="." instance=ExtResource( 12 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0, 0 )
+
+[node name="Industrial_New_Wall_Panel_Light_Mid2" parent="." instance=ExtResource( 12 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 16, 0, 0 )
+
+[node name="Industrial_New_Wall_Panel_Light_Mid3" parent="." instance=ExtResource( 12 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 36, -6, 0 )
+
+[node name="Industrial_New_Wall_Panel_Light_Mid4" parent="." instance=ExtResource( 12 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 44, -6, 0 )
+
+[node name="Industrial_New_Wall_Panel_Light_Mid5" parent="." instance=ExtResource( 12 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 28, -6, 0 )
+
+[node name="Industrial_New_Wall_Panel_Slats" parent="." instance=ExtResource( 9 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 2, 0 )
+
+[node name="Industrial_New_Wall_Panel_Slats2" parent="." instance=ExtResource( 9 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 4, 0, 0 )
+
+[node name="Industrial_New_Wall_Panel_Slats3" parent="." instance=ExtResource( 9 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 10, 0, 0 )
+
+[node name="Industrial_New_Wall_Panel_Slats5" parent="." instance=ExtResource( 9 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 12, -4, 0 )
+
+[node name="Industrial_New_Wall_Panel_GrillFan" parent="." instance=ExtResource( 10 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -2, 2, 0 )
+
+[node name="Industrial_New_Wall_Panel_GrillFan2" parent="." instance=ExtResource( 10 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 2, 2, 0 )
+
+[node name="Industrial_New_Wall_Panel_GrillFan3" parent="." instance=ExtResource( 10 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 12, 2, 0 )
+
+[node name="Industrial_New_Wall_Panel_Grill" parent="." instance=ExtResource( 11 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 14, 0, 0 )
+
+[node name="Industrial_New_Wall_Panel_Grill4" parent="." instance=ExtResource( 11 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 24, 0, 0 )
+
+[node name="Industrial_New_Wall_Panel_Grill6" parent="." instance=ExtResource( 11 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 34, -4, 0 )
+
+[node name="Industrial_New_Wall_Panel_Grill7" parent="." instance=ExtResource( 11 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 36, -4, 0 )
+
+[node name="Industrial_New_Wall_Panel_Grill8" parent="." instance=ExtResource( 11 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 42, -6, 0 )
+
+[node name="Industrial_New_Wall_Panel_Grill2" parent="." instance=ExtResource( 11 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 10, 2, 0 )
+
+[node name="Industrial_New_Wall_Panel_Grill3" parent="." instance=ExtResource( 11 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 8, 2, 0 )
+
+[node name="Industrial_New_Wall_Panel_Empty4" parent="." instance=ExtResource( 8 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 2, 0, 0 )
+
+[node name="Industrial_New_Wall_Panel_Empty14" parent="." instance=ExtResource( 8 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 6, 0, 0 )
+
+[node name="Industrial_New_Wall_Panel_Empty15" parent="." instance=ExtResource( 8 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 8, 0, 0 )
+
+[node name="Industrial_New_Wall_Panel_Empty16" parent="." instance=ExtResource( 8 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 12, 0, 0 )
+
+[node name="Industrial_New_Wall_Panel_Empty25" parent="." instance=ExtResource( 8 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 12, -2, 0 )
+
+[node name="Industrial_New_Wall_Panel_Empty29" parent="." instance=ExtResource( 8 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 20, 0, 0 )
+
+[node name="Industrial_New_Wall_Panel_Empty30" parent="." instance=ExtResource( 8 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 20, 2, 0 )
+
+[node name="Industrial_New_Wall_Panel_Empty32" parent="." instance=ExtResource( 8 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 14, -2, 0 )
+
+[node name="Industrial_New_Wall_Panel_Empty33" parent="." instance=ExtResource( 8 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 14, -4, 0 )
+
+[node name="Industrial_New_Wall_Panel_Empty17" parent="." instance=ExtResource( 8 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 18, 0, 0 )
+
+[node name="Industrial_New_Wall_Panel_Empty18" parent="." instance=ExtResource( 8 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 18, 2, 0 )
+
+[node name="Industrial_New_Wall_Panel_Empty19" parent="." instance=ExtResource( 8 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 4, 2, 0 )
+
+[node name="Industrial_New_Wall_Panel_Empty20" parent="." instance=ExtResource( 8 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 6, 2, 0 )
+
+[node name="Industrial_New_Wall_Panel_Empty21" parent="." instance=ExtResource( 8 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 14, 2, 0 )
+
+[node name="Industrial_New_Wall_Panel_Empty22" parent="." instance=ExtResource( 8 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 16, 2, 0 )
+
+[node name="Industrial_New_Wall_Panel_Empty5" parent="." instance=ExtResource( 8 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -2, 0, 0 )
+
+[node name="Industrial_New_Wall_Panel_Andled_Empty" parent="." instance=ExtResource( 13 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 4, 0 )
+
+[node name="Industrial_New_Wall_Panel_Andled_Empty2" parent="." instance=ExtResource( 13 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -2, 4, 0 )
+
+[node name="Industrial_New_Wall_Panel_Andled_Empty3" parent="." instance=ExtResource( 13 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 2, 4, 0 )
+
+[node name="Industrial_New_Wall_Panel_Andled_Empty4" parent="." instance=ExtResource( 13 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 4, 4, 0 )
+
+[node name="Industrial_New_Wall_Panel_Andled_Empty5" parent="." instance=ExtResource( 13 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 10, 4, 0 )
+
+[node name="Industrial_New_Wall_Panel_Andled_Empty6" parent="." instance=ExtResource( 13 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 12, 4, 0 )
+
+[node name="Industrial_New_Wall_Panel_Andled_Empty7" parent="." instance=ExtResource( 13 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 16, 4, 0 )
+
+[node name="Industrial_New_Wall_Panel_Andled_Empty8" parent="." instance=ExtResource( 13 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 20, 4, 0 )
+
+[node name="Industrial_New_Beams_1" parent="." instance=ExtResource( 14 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -3, 4.57, 0 )
+
+[node name="Industrial_New_Beams_2" parent="." instance=ExtResource( 14 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 3, 4.59, 0 )
+
+[node name="Industrial_New_Beams_4" parent="." instance=ExtResource( 14 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 3, 4.59, 3 )
+
+[node name="Industrial_New_Beams_5" parent="." instance=ExtResource( 14 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -3, 4.57, 3 )
+
+[node name="Industrial_New_Beams_3_Floor" parent="." instance=ExtResource( 16 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 18, 0.55, 0 )
+
+[node name="Industrial_New_Beams_3_Floor3" parent="." instance=ExtResource( 16 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 26, -3.5, 0 )
+
+[node name="Industrial_New_Beams_3_Floor7" parent="." instance=ExtResource( 16 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 36, -1.5, 0 )
+
+[node name="Industrial_New_Beams_3_Floor5" parent="." instance=ExtResource( 16 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 46, -3.5, 0 )
+
+[node name="Industrial_New_Beams_3_Floor6" parent="." instance=ExtResource( 16 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 48, -5.5, 0 )
+
+[node name="Industrial_New_Beams_3_Floor4" parent="." instance=ExtResource( 16 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 24, -5.5, 0 )
+
+[node name="Industrial_New_Beams_3_Floor2" parent="." instance=ExtResource( 16 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 18, 2.55, 0 )
+
+[node name="Spikes" parent="." instance=ExtResource( 15 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 30, -15.5, 0 )
+
+[node name="Spikes2" parent="." instance=ExtResource( 15 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 32, -15.5, 0 )
+
+[node name="Spikes10" parent="." instance=ExtResource( 15 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 16, -3.5, 0 )
+
+[node name="Spikes3" parent="." instance=ExtResource( 15 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 34, -15.5, 0 )
+
+[node name="Spikes4" parent="." instance=ExtResource( 15 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 36, -15.5, 0 )
+
+[node name="Spikes5" parent="." instance=ExtResource( 15 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 38, -15.5, 0 )
+
+[node name="Spikes6" parent="." instance=ExtResource( 15 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 40, -15.5, 0 )
+
+[node name="Spikes7" parent="." instance=ExtResource( 15 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 42, -15.5, 0 )
+
+[node name="Spikes8" parent="." instance=ExtResource( 15 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 54, -5.5, 0 )
+
+[node name="Spikes9" parent="." instance=ExtResource( 15 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 50, -3.5, 0 )
+
+[node name="Hole" parent="." instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.75, 1.75, 1.35 )
+
+[node name="Hole2" parent="." instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.75, -0.25, 1.35 )
+
+[node name="Hole3" parent="." instance=ExtResource( 17 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 21, -0.25, 1.35 )
+
+[node name="Industrial_New_Beams_6" parent="." instance=ExtResource( 14 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 21, -1.45, 0 )
+
+[node name="Industrial_New_Beams_7" parent="." instance=ExtResource( 14 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 11, 0.55, 0 )
+
+[node name="Industrial_New_Beams_8" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 6, 0.5, 0 )
+
+[node name="Industrial_New_Beams_9" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 12, -3.5, 0 )
+
+[node name="Industrial_New_Beams_10" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 18, -3.5, 0 )
+
+[node name="Industrial_Ruin_Arch_Left_End" parent="." instance=ExtResource( 18 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 36, 0, 0 )
+
+[node name="Industrial_Ruin_Arch_Left_End2" parent="." instance=ExtResource( 18 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 44, 0, 0 )
