@@ -1,0 +1,13 @@
+[gd_scene format=2]
+
+[node name="SpotLight" type="SpotLight"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.135, 1.7, -0.27 )
+light_color = Color( 0.729412, 1, 1, 1 )
+light_energy = 3.0
+spot_range = 10.0
+spot_attenuation = 4.0
+spot_angle = 89.99
+spot_angle_attenuation = 3.0
+__meta__ = {
+"_editor_description_": ""
+}
