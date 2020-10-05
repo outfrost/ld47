@@ -12,6 +12,7 @@ var current_level: int = -1
 var level: Node
 
 var death_ct: int = 0
+var total_death_ct: int = 0
 var fall_death_ct: int = 0
 
 func _ready() -> void:
@@ -90,6 +91,8 @@ func spawn_level() -> void:
 	level = (levels[current_level] as PackedScene).instance()
 	level_container.add_child(level)
 	spawn_player()
+	total_death_ct += death_ct 
+	death_ct = 0
 	match current_level:
 		0:
 			yield(get_tree().create_timer(2.0), "timeout")
