@@ -548,7 +548,10 @@ transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 56, -3.
 transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 54, -1.5, 0 )
 
 [node name="Industrial_New_Floor_Plain12" parent="." instance=ExtResource( 20 )]
-transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 56, -5.5, 0 )
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 58, -7.5, 0 )
+
+[node name="Industrial_New_Floor_Plain17" parent="." instance=ExtResource( 20 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 56, -7.5, 0 )
 
 [node name="Industrial_New_Floor_Plain15" parent="." instance=ExtResource( 20 )]
 transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 56, -7.5, -2 )
