@@ -166,9 +166,6 @@ transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 40, 4.5
 [node name="Industrial_New_Beams_2_Floor5" parent="." instance=ExtResource( 5 )]
 transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 56, 4.5, 0 )
 
-[node name="Industrial_New_Beams_2_Floor6" parent="." instance=ExtResource( 5 )]
-transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 56, 0.5, 0 )
-
 [node name="Industrial_New_Beams_2_Floor2" parent="." instance=ExtResource( 5 )]
 transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 6, 2.48582, 0 )
 
@@ -544,6 +541,12 @@ transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 46, -3.
 [node name="Industrial_New_Floor_Plain8" parent="." instance=ExtResource( 20 )]
 transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 56, -3.5, 0 )
 
+[node name="Industrial_New_Floor_Plain10" parent="." instance=ExtResource( 20 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 54, 0.5, 0 )
+
+[node name="Industrial_New_Floor_Plain18" parent="." instance=ExtResource( 20 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 58, 0.5, 0 )
+
 [node name="Industrial_New_Floor_Plain9" parent="." instance=ExtResource( 20 )]
 transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 54, -1.5, 0 )
 
@@ -744,6 +747,12 @@ transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 57, -5.
 
 [node name="Industrial_New_Beams_33" parent="." instance=ExtResource( 14 )]
 transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 55, -5.5, 0 )
+
+[node name="Industrial_New_Beams_41" parent="." instance=ExtResource( 14 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 57, 0.5, 0 )
+
+[node name="Industrial_New_Beams_42" parent="." instance=ExtResource( 14 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 55, 0.5, 0 )
 
 [node name="Industrial_New_Beams_34" parent="." instance=ExtResource( 14 )]
 transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 57, 2.5, 0 )
