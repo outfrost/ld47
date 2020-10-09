@@ -121,10 +121,14 @@ __meta__ = {
 }
 
 [node name="Panel" type="Panel" parent="CreditsPopup"]
-anchor_left = 0.25
-anchor_top = 0.25
-anchor_right = 0.75
-anchor_bottom = 0.75
+anchor_left = 0.45
+anchor_top = 0.45
+anchor_right = 0.55
+anchor_bottom = 0.55
+margin_left = -386.0
+margin_top = -234.0
+margin_right = 386.0
+margin_bottom = 234.0
 grow_horizontal = 2
 grow_vertical = 2
 custom_styles/panel = ExtResource( 5 )
@@ -176,7 +180,11 @@ margin_top = 16.0
 margin_right = -16.0
 margin_bottom = -16.0
 bbcode_enabled = true
-bbcode_text = "[center]Music
+bbcode_text = "[center]Writing
+[b]666Savior[/b]
+[b]Outfrost[/b]
+
+Music
 [b]Marek Domagała[/b]
 
 Sound effects
@@ -186,12 +194,12 @@ cheatsman115
 farbin
 unfa
 
-
-
-
-
 Godot Engine 3.2.3[/center]"
-text = "Music
+text = "Writing
+666Savior
+Outfrost
+
+Music
 Marek Domagała
 
 Sound effects
@@ -200,9 +208,5 @@ aboe
 cheatsman115
 farbin
 unfa
-
-
-
-
 
 Godot Engine 3.2.3"
