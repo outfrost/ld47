@@ -51,7 +51,7 @@ margin_right = 512.0
 margin_bottom = -8.0
 grow_vertical = 0
 custom_fonts/font = SubResource( 2 )
-text = "v0.0.9"
+text = "v0.0.10"
 valign = 2
 __meta__ = {
 "_edit_use_anchors_": false
