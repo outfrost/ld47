@@ -156,7 +156,9 @@ Level design
 
 Programming
 [b]Outfrost[/b]
-[b]saveng0r[/b][/center]"
+[b]saveng0r[/b]
+
+A [url=https://ldjam.com/events/ludum-dare/47/pillars-of-anguish]Ludum Dare 47 game[/url][/center]"
 text = "3D art
 666Savior
 
@@ -169,7 +171,9 @@ Level design
 
 Programming
 Outfrost
-saveng0r"
+saveng0r
+
+A Ludum Dare 47 game"
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="CreditsPopup/Panel"]
 anchor_left = 0.5
