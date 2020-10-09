@@ -7,11 +7,11 @@
 [ext_resource path="res://game/ui-theme/panel_style_popup.tres" type="StyleBox" id=5]
 [ext_resource path="res://fonts/Merriweather/Merriweather-Regular.ttf" type="DynamicFontData" id=6]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 use_filter = true
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=2]
 size = 64
 use_filter = true
 font_data = ExtResource( 1 )
@@ -50,7 +50,7 @@ margin_top = -64.0
 margin_right = 512.0
 margin_bottom = -8.0
 grow_vertical = 0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 text = "v0.0.10"
 valign = 2
 __meta__ = {
@@ -63,7 +63,7 @@ anchor_top = 0.1
 anchor_right = 0.95
 anchor_bottom = 0.5
 theme = ExtResource( 3 )
-custom_fonts/normal_font = SubResource( 1 )
+custom_fonts/normal_font = SubResource( 2 )
 bbcode_enabled = true
 bbcode_text = "[center]Pillars of Anguish[/center]"
 text = "Pillars of Anguish"
