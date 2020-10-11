@@ -271,6 +271,8 @@ func spawn_level() -> void:
 		narrative_popup.display("It's easy to get you to do things. Even dumb ones.", 6.0)
 		awaiting_esc_comeback = false
 		character.controllable = true
+		if fall_death_ct >= 9:
+			death_ct_label.show()
 		return
 	match current_level:
 		0:
