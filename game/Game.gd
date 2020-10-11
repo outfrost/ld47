@@ -65,14 +65,9 @@ func on_player_ded(reason: String) -> void:
 						3:
 							narrative_popup.display("I know you can figure this out."
 								+ " Probably.", 5.0)
-						5:
+						6:
 							narrative_popup.display("Now that you know how to fall, try jumping."
 								+ " It's [Space], [W] or [↑].", 8.0)
-						7:
-							narrative_popup.display("If you get stuck, you can always just die on the spot."
-								+ " Feel free to press [F] or [Enter].", 7.0)
-							yield(get_tree().create_timer(7.0), "timeout")
-							narrative_popup.display("I won't be paying respects, though.", 4.0)
 						9:
 							narrative_popup.display("You seem to be dying a lot."
 								+ " Don’t worry, I’ve got your back.", 4.0)
@@ -80,7 +75,7 @@ func on_player_ded(reason: String) -> void:
 							death_ct_label.show()
 							narrative_popup.display("I’ll put up a counter for you."
 								+ " That should make you do better.", 6.0)
-						11:
+						12:
 							narrative_popup.display("I forgot to ask. Are you afraid of heights?", 5.0)
 						16:
 							narrative_popup.display("Cool. A bonsai of dead bodies.", 5.0)
