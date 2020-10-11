@@ -22,11 +22,18 @@ var said_grilling_shashlik: bool = false
 var said_esc_trigger: bool = false
 var awaiting_esc_comeback: bool = false
 
+var dialogue_timer: SceneTreeTimer
+
 func _ready() -> void:
 	pass
 
 func _process(delta: float) -> void:
 	DebugLabel.display(self, "fps %d" % Performance.get_monitor(Performance.TIME_FPS))
+
+	if Input.is_action_just_pressed("dialogue_skip"):
+		narrative_popup.hide()
+		if dialogue_timer:
+			dialogue_timer.time_left = 0.0
 
 	if level && Input.is_action_just_pressed("menu"):
 		back_to_menu()
@@ -52,12 +59,14 @@ func on_player_ded(reason: String) -> void:
 							character.controllable = false
 							narrative_popup.display("Oh wow, you actually jumped."
 								+ " Honestly, I wasn’t expecting you to.", 4.0)
-							yield(get_tree().create_timer(4.0), "timeout")
+							dialogue_timer = get_tree().create_timer(4.0)
+							yield(dialogue_timer, "timeout")
 							var offset = character.camera_offset
 							character.camera_offset += Vector3(3.0, -6.0, 0.0)
-							narrative_popup.display("Well anyways, you probably noticed"
+							narrative_popup.display("Well, anyway, you probably noticed"
 								+ " that your body is down there but you’re still up here.", 7.0)
-							yield(get_tree().create_timer(7.0), "timeout")
+							dialogue_timer = get_tree().create_timer(7.0)
+							yield(dialogue_timer, "timeout")
 							character.camera_offset = offset
 							character.controllable = true
 							narrative_popup.display("Now, if you use your brain [i]really[/i] hard,"
@@ -66,12 +75,21 @@ func on_player_ded(reason: String) -> void:
 							narrative_popup.display("I know you can figure this out."
 								+ " Probably.", 5.0)
 						6:
-							narrative_popup.display("Now that you know how to fall, try jumping."
+							character.controllable = false
+							narrative_popup.display("Now that you know how to fall, you can try jumping."
 								+ " It's [Space], [W] or [↑].", 8.0)
+							dialogue_timer = get_tree().create_timer(2.0)
+							yield(dialogue_timer, "timeout")
+							character.controllable = true
 						9:
+							character.controllable = false
 							narrative_popup.display("You seem to be dying a lot."
 								+ " Don’t worry, I’ve got your back.", 4.0)
-							yield(get_tree().create_timer(4.0), "timeout")
+							dialogue_timer = get_tree().create_timer(2.0)
+							yield(dialogue_timer, "timeout")
+							character.controllable = true
+							dialogue_timer = get_tree().create_timer(2.0)
+							yield(dialogue_timer, "timeout")
 							death_ct_label.show()
 							narrative_popup.display("I’ll put up a counter for you."
 								+ " That should make you do better.", 6.0)
@@ -88,7 +106,8 @@ func on_player_ded(reason: String) -> void:
 					match spikes_death_ct:
 						1:
 							narrative_popup.display("I can't believe you just walked into that.", 5.0)
-							yield(get_tree().create_timer(5.0), "timeout")
+							dialogue_timer = get_tree().create_timer(5.0)
+							yield(dialogue_timer, "timeout")
 							narrative_popup.display("That was pretty dumb.", 2.0)
 						2:
 							narrative_popup.display("Are you trying to make a human shashlik?", 5.0)
@@ -104,9 +123,7 @@ func on_player_ded(reason: String) -> void:
 				"fire":
 					fire_death_ct += 1
 					match fire_death_ct:
-						1:
-							continue
-						2:
+						1, 2:
 							if !said_grilling_shashlik && spikes_death_ct >= 2:
 								narrative_popup.display("Ah, time to grill the shashlik.", 5.0)
 								said_grilling_shashlik = true
@@ -176,11 +193,12 @@ func on_player_ded(reason: String) -> void:
 						1:
 							narrative_popup.display("Ah, here we go. You're gonna eat hot plasma now?", 5.0)
 						3:
-							narrative_popup.display("Pretty sure you're supposed to avoid those.", 5.0)
+							narrative_popup.display("I... think you're supposed to avoid those.", 5.0)
 						5:
 							narrative_popup.display("Not only will this kill you,"
 								+ " it will hurt the entire time you're dying.", 7.0)
-							yield(get_tree().create_timer(7.0), "timeout")
+							dialogue_timer = get_tree().create_timer(7.0)
+							yield(dialogue_timer, "timeout")
 							narrative_popup.display("Luckily for you that's about a second."
 								+ " Every time.", 6.0)
 						7:
@@ -201,23 +219,31 @@ func on_level_finished() -> void:
 	next_level()
 
 func on_game_finished() -> void:
-	yield(get_tree().create_timer(4.0), "timeout")
+	character.controllable = false
+	dialogue_timer = get_tree().create_timer(4.0)
+	yield(dialogue_timer, "timeout")
 	narrative_popup.display("Well look at you.", 3.0)
-	yield(get_tree().create_timer(3.0), "timeout")
+	dialogue_timer = get_tree().create_timer(3.0)
+	yield(dialogue_timer, "timeout")
 	narrative_popup.display("You actually did it.", 4.0)
-	yield(get_tree().create_timer(4.0), "timeout")
+	dialogue_timer = get_tree().create_timer(4.0)
+	yield(dialogue_timer, "timeout")
 	death_ct_label.bbcode_text = "Total deaths: %d" % total_death_ct
 	death_ct_label.show()
 	$DeathCtPanel.show()
 	narrative_popup.display("All of that pain and misery has brought you here."
 		+ " Into this blank void.", 7.0)
-	yield(get_tree().create_timer(7.0), "timeout")
+	dialogue_timer = get_tree().create_timer(7.0)
+	yield(dialogue_timer, "timeout")
 	narrative_popup.display("[i]\"What now\"[/i], you ask?", 4.0)
-	yield(get_tree().create_timer(4.0), "timeout")
+	dialogue_timer = get_tree().create_timer(4.0)
+	yield(dialogue_timer, "timeout")
 	narrative_popup.display("There was never a plan for anything.", 3.0)
-	yield(get_tree().create_timer(3.0), "timeout")
+	dialogue_timer = get_tree().create_timer(3.0)
+	yield(dialogue_timer, "timeout")
 	narrative_popup.display("Anyway, I've got a train to catch. Farewell.", 4.0)
-	yield(get_tree().create_timer(5.0), "timeout")
+	dialogue_timer = get_tree().create_timer(5.0)
+	yield(dialogue_timer, "timeout")
 	current_level = (current_level + 1) % levels.size()
 	back_to_menu()
 
@@ -257,12 +283,13 @@ func spawn_level() -> void:
 	level_container.add_child(level)
 	spawn_player()
 	character.controllable = false
-	total_death_ct += death_ct 
+	total_death_ct += death_ct
 	death_ct = 0
 	death_ct_label.bbcode_text = "Deaths: %d" % death_ct
 	if awaiting_esc_comeback:
 		narrative_popup.display("Oh, haha, you fell for that?", 5.0)
-		yield(get_tree().create_timer(5.0), "timeout")
+		dialogue_timer = get_tree().create_timer(5.0)
+		yield(dialogue_timer, "timeout")
 		narrative_popup.display("It's easy to get you to do things. Even dumb ones.", 6.0)
 		awaiting_esc_comeback = false
 		character.controllable = true
@@ -273,29 +300,39 @@ func spawn_level() -> void:
 		0:
 			death_ct_label.hide() # Hide label in case we circle back
 			$DeathCtPanel.hide()
-			yield(get_tree().create_timer(2.0), "timeout")
+			dialogue_timer = get_tree().create_timer(2.0)
+			yield(dialogue_timer, "timeout")
 			narrative_popup.display("Oh, hey there.", 4.0)
-			yield(get_tree().create_timer(4.0), "timeout")
+			dialogue_timer = get_tree().create_timer(4.0)
+			yield(dialogue_timer, "timeout")
 			narrative_popup.display("Are you lost?", 4.0)
-			yield(get_tree().create_timer(4.0), "timeout")
+			dialogue_timer = get_tree().create_timer(4.0)
+			yield(dialogue_timer, "timeout")
 			narrative_popup.display("I didn't expect to find you here."
 				+ " You probably want to get out of here, don't you?", 8.0)
-			yield(get_tree().create_timer(8.0), "timeout")
+			dialogue_timer = get_tree().create_timer(8.0)
+			yield(dialogue_timer, "timeout")
 			narrative_popup.display("Who would want to stay in this place, anyway.", 4.0)
-			yield(get_tree().create_timer(5.0), "timeout")
+			dialogue_timer = get_tree().create_timer(5.0)
+			yield(dialogue_timer, "timeout")
 			narrative_popup.display("Well, you gotta find an exit.", 4.0)
-			yield(get_tree().create_timer(4.0), "timeout")
+			dialogue_timer = get_tree().create_timer(4.0)
+			yield(dialogue_timer, "timeout")
 			narrative_popup.display("If you haven't figured, it's [A] and [D] or [←] and [→] to move.", 6.0)
-			yield(get_tree().create_timer(6.0), "timeout")
+			dialogue_timer = get_tree().create_timer(6.0)
+			yield(dialogue_timer, "timeout")
 			character.controllable = true
 			narrative_popup.display("See that ledge in front of you? Jump off of it.", 6.0)
 		1:
 			death_ct_label.show() # This will show the death count label in case we skip the first level before completing the tutorial
-			yield(get_tree().create_timer(0.5), "timeout")
+			dialogue_timer = get_tree().create_timer(0.5)
+			yield(dialogue_timer, "timeout")
 			narrative_popup.display("Geez, finally. Did it have to take so long?", 5.0)
-			yield(get_tree().create_timer(5.0), "timeout")
+			dialogue_timer = get_tree().create_timer(5.0)
+			yield(dialogue_timer, "timeout")
 			narrative_popup.display("Well, it does seem like this corridor leads somewhere.", 6.0)
-			yield(get_tree().create_timer(6.0), "timeout")
+			dialogue_timer = get_tree().create_timer(6.0)
+			yield(dialogue_timer, "timeout")
 			character.controllable = true
 			narrative_popup.display("Might as well find out where.", 4.0)
 		2:
