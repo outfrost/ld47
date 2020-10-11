@@ -1,3 +1,4 @@
+class_name PlayerCharacter
 extends KinematicBody
 
 signal player_ded(reason)

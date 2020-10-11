@@ -9,14 +9,15 @@ func _ready():
 func _process(delta):
 	$Particles.emitting = emitting
 	$Light.visible = emitting
-	if character and emitting:
+	if emitting and character and !character.dead:
 		$AudioStreamPlayer3D.play()
 		character.die("fire")
+		character = null
 
 func _on_Area_body_entered(body):
-	if body.has_method("die"):
+	if body is PlayerCharacter and !body.dead:
 		character = body
 
 func _on_Area_body_exited(body: Node) -> void:
-	if body == character:
+	if body is PlayerCharacter and !body.dead:
 		character = null

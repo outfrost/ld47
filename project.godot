@@ -23,11 +23,17 @@ _global_script_classes=[ {
 "class": "NarrativePopup",
 "language": "GDScript",
 "path": "res://game/NarrativePopup.gd"
+}, {
+"base": "KinematicBody",
+"class": "PlayerCharacter",
+"language": "GDScript",
+"path": "res://characters/PlayerCharacter.gd"
 } ]
 _global_script_class_icons={
 "DebugLabel": "",
 "GroupMessenger": "",
-"NarrativePopup": ""
+"NarrativePopup": "",
+"PlayerCharacter": ""
 }
 
 [application]
