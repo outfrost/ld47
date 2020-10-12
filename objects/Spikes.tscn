@@ -5,7 +5,7 @@
 [ext_resource path="res://sounds/69480__aboe__knifesha4.wav" type="AudioStream" id=3]
 
 [sub_resource type="BoxShape" id=1]
-extents = Vector3( 0.8, 0.275, 1.5 )
+extents = Vector3( 0.7, 0.275, 1.5 )
 
 [node name="Spikes" type="Area"]
 script = ExtResource( 1 )
