@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://environment/Assets/Steel.material" type="Material" id=1]
 
@@ -20,6 +20,9 @@ surfaces/0 = {
 [sub_resource type="BoxShape" id=2]
 extents = Vector3( 3, 1, 0.125 )
 
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 3, 0.125, 0.5 )
+
 [node name="Industrial_New_Arch_Left_Empty_End" type="StaticBody"]
 
 [node name="NurbsPath033" type="MeshInstance" parent="."]
@@ -31,3 +34,7 @@ material/0 = null
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.125 )
 shape = SubResource( 2 )
 disabled = true
+
+[node name="CollisionShape2" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -1.25 )
+shape = SubResource( 3 )
