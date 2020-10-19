@@ -124,9 +124,6 @@ transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 56, -12
 [node name="Industrial_New_Mid_Empty_3" parent="." instance=ExtResource( 4 )]
 transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 2, 0, 0 )
 
-[node name="Industrial_New_Mid_Empty_22" parent="." instance=ExtResource( 4 )]
-transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -4, 0, 0 )
-
 [node name="Industrial_New_Beams_3_Floor2" parent="." instance=ExtResource( 1 )]
 transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 13.9999, -3.48778, -0.00533819 )
 
